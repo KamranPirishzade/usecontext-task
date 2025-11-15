@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "./context/LanguageContext";
 
 const LanguagesDropdown = () => {
+  const [language, setLanguage] = useContext(LanguageContext);
+
+  function handleLang(e) {
+    setLanguage(e.target.value);
+  }
   return (
     <div>
-      <select name="lang" id="lang" className="p-2 outline-1 rounded-2xl">
-        <option value="en">English</option>
-        <option value="az">Azerbaijan</option>
-        <option value="ru">Russian</option>
+      <select
+        name="lang"
+        id="lang"
+        className="p-2 outline-1 rounded-2xl"
+        onChange={handleLang}
+      >
+        <option value="en" selected={language == "en"}>
+          English
+        </option>
+        <option value="az" selected={language == "az"}>
+          Azerbaijan
+        </option>
+        <option value="ru" selected={language == "ru"}>
+          Russian
+        </option>
       </select>
     </div>
   );

@@ -9,7 +9,6 @@ const UI = () => {
   //   console.log(Object.keys(localStorage.getItem("user")).length);
   const [userData] = useContext(UserContext);
   const [theme] = useContext(ThemeContext);
-  console.log(userData);
   return (
     <div className="min-h-screen bg-sky-100 flex flex-col items-center">
       {Object.keys(userData).length !== 0 ? (
