@@ -1,0 +1,94 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": {
+        "en": "How AI Is Transforming Everyday Life",
+        "az": "Süni İntellekt Gündəlik Həyatı Necə Dəyişir",
+        "ru": "Как ИИ Меняет Повседневную Жизнь"
+      },
+      "content": {
+        "en": "Artificial intelligence has evolved from a futuristic concept into a powerful tool that influences our daily activities. From personalized recommendations on social media to advanced medical diagnostics, AI is reshaping the way we interact with the world. One of the most significant impacts is automation, which helps businesses optimize workflows and reduce human error. Smart home systems also rely heavily on AI, allowing users to control lighting, security, and household appliances with simple voice commands. As AI continues to progress, it is expected to unlock even more possibilities, revolutionizing industries such as education, transportation, and entertainment. Despite concerns about job displacement, experts suggest that AI will create new opportunities by enabling people to focus on creative and strategic tasks.",
+        "az": "Süni intellekt artıq gələcəyin texnologiyası deyil, gündəlik həyatımızın ayrılmaz bir hissəsinə çevrilib. Sosial şəbəkələrdə fərdiləşdirilmiş tövsiyələrdən tutmuş tibbi diaqnostika sistemlərinə qədər, AI dünyanın hər sahəsinə təsir göstərir. Ən böyük təsirlərdən biri avtomatlaşdırmadır — şirkətlər iş proseslərini sürətləndirir və insan səhvlərini minimuma endirir. Ağıllı ev sistemləri də süni intellektdən geniş istifadə edir və istifadəçilərə səsi ilə işıqları, təhlükəsizliyi və məişət cihazlarını idarə etməyə imkan yaradır. AI-nin sürətli inkişafı təhsil, nəqliyyat və əyləncə kimi sahələrdə böyük dəyişikliklərin olacağını göstərir. Hərçənd bəzi insanlar iş yerlərinin azalacağından narahatdır, mütəxəssislər yeni yaradılan peşələrin daha çox yaradıcı və strateji bacarıqlara ehtiyac duyacağını bildirirlər.",
+        "ru": "Искусственный интеллект перестал быть концепцией будущего и стал мощным инструментом, влияющим на повседневную жизнь. От персонализированных рекомендаций в социальных сетях до современных медицинских диагностических систем — ИИ меняет наше взаимодействие с миром. Одним из наиболее заметных эффектов является автоматизация, позволяющая компаниям оптимизировать рабочие процессы и снижать количество ошибок. Умные дома также активно используют ИИ, предоставляя пользователям возможность управлять освещением, безопасностью и бытовой техникой с помощью голоса. По мере развития ИИ ожидается ещё больше инноваций в сферах образования, транспорта и развлечений. Несмотря на опасения относительно сокращения рабочих мест, специалисты считают, что ИИ создаст новые профессии, требующие творческих и аналитических навыков."
+      },
+      "author": {
+        "en": "Kamran Pirishzade",
+        "az": "Kamran Pirişzadə",
+        "ru": "Камран Пиришзаде"
+      }
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "Why Learning Programming Is a Must in 2025",
+        "az": "2025-ci İldə Proqramlaşdırma Öyrənmək Niyə Vacibdir",
+        "ru": "Почему Важно Учить Программирование в 2025 Году"
+      },
+      "content": {
+        "en": "Programming is no longer a niche skill—it's becoming a core requirement across almost every industry. In 2025, companies increasingly depend on digital tools, automation, and data-driven decision-making. This creates a high demand for individuals who understand how software works. Learning to code enhances problem-solving abilities and opens the door to many career opportunities in fields like web development, cybersecurity, artificial intelligence, and data science. Even non-technical professions benefit, as programming helps employees automate repetitive tasks and optimize their workflows. The rise of online courses and interactive platforms has also made learning programming more accessible than ever.",
+        "az": "Proqramlaşdırma artıq yalnız texniki mütəxəssislərə lazım olan bacarıq deyil — o, demək olar ki, bütün sahələr üçün vacib tələblərdən birinə çevrilib. 2025-ci ildə şirkətlər rəqəmsal alətlərə, avtomatlaşdırmaya və məlumat əsasında qərar verməyə daha çox üstünlük verir. Bu isə proqram təminatının necə işlədiyini bilən mütəxəssislərə böyük tələbat yaradır. Kodlaşdırmanı öyrənmək problem həll etmə bacarıqlarını artırır və web inkişaf, kibertəhlükəsizlik, süni intellekt və məlumat elmi kimi sahələrdə geniş imkanlar açır. Hətta texniki olmayan sahələrdə çalışan insanlar belə təkrarlanan işləri avtomatlaşdırmaq üçün proqramlaşdırmadan istifadə edirlər. Online kursların və interaktiv platformaların artması proqramlaşdırma öyrənməyi daha əlçatan edib.",
+        "ru": "Программирование перестало быть узкой специализацией — в 2025 году оно становится необходимым навыком почти в каждой сфере. Компании всё чаще используют цифровые инструменты, автоматизацию и аналитику, что создаёт высокий спрос на тех, кто понимает основы разработки. Изучение программирования улучшает навыки решения проблем и открывает двери в профессии, связанные с веб-разработкой, кибербезопасностью, искусственным интеллектом и анализом данных. Даже в нетехнических специальностях умение писать код помогает автоматизировать рутинные процессы. Благодаря онлайн-курсам и обучающим платформам изучать программирование стало значительно проще."
+      },
+      "author": {
+        "en": "Tech Academy Editorial Team",
+        "az": "Tech Academy Redaksiya Komandası",
+        "ru": "Редакционная Команда Tech Academy"
+      }
+    },
+    {
+      "id": 3,
+      "title": {
+        "en": "Top 5 Skills Every Frontend Developer Needs",
+        "az": "Hər Frontend Developerin Bilməli Olduğu 5 Bacarıq",
+        "ru": "5 Навыков, Которые Нужны Каждому Фронтенд-Разработчику"
+      },
+      "content": {
+        "en": "The field of frontend development is evolving rapidly, and developers must constantly adapt to new technologies and best practices. The first essential skill is mastering HTML, CSS, and JavaScript — the core building blocks of the web. Responsive design is equally important, ensuring that websites function seamlessly on all devices. Developers must also understand frameworks like React or Vue, which significantly speed up development. Another critical skill is version control, particularly Git, which enables collaboration and project management. Finally, frontend developers must learn how to optimize performance, as fast websites lead to better user engagement and search engine rankings.",
+        "az": "Frontend inkişaf sahəsi sürətlə dəyişir və developerlər daim yeni texnologiyalara uyğunlaşmalıdır. Əsas bacarıqlardan birincisi HTML, CSS və JavaScript-i mükəmməl bilməkdir — bunlar web-in əsas sütunlarıdır. Responziv dizayn da çox vacibdir, çünki saytların bütün cihazlarda problemsiz işləməsini təmin edir. React və ya Vue kimi framework-ləri bilmək inkişaf prosesini xeyli sürətləndirir. Versiya nəzarəti, xüsusilə Git, komanda işi və layihə idarəetməsi üçün mütləqdir. Nəhayət, performans optimizasiyası vacibdir, çünki sürətli saytlar daha çox istifadəçi cəlb edir və axtarış sistemlərində daha yüksək nəticə göstərir.",
+        "ru": "Фронтенд-разработка развивается очень быстро, и специалистам нужно постоянно обновлять свои навыки. Базовые знания включают HTML, CSS и JavaScript — фундамент веб-разработки. Не менее важно владение принципами адаптивного дизайна, чтобы сайты корректно отображались на любых устройствах. Популярные фреймворки, такие как React или Vue, значительно ускоряют процесс разработки. Ещё один ключевой навык — работа с системами контроля версий, особенно Git, который необходим для командной работы. И наконец, оптимизация производительности играет огромную роль, так как быстрые сайты обеспечивают лучший пользовательский опыт."
+      },
+      "author": {
+        "en": "Frontend School",
+        "az": "Frontend Məktəbi",
+        "ru": "Школа Фронтенда"
+      }
+    },
+    {
+      "id": 4,
+      "title": {
+        "en": "The Future of Web Design: Trends to Watch in 2025",
+        "az": "Web Dizaynın Gələcəyi: 2025-ci İlin Trendləri",
+        "ru": "Будущее Веб-Дизайна: Тренды 2025 Года"
+      },
+      "content": {
+        "en": "Web design in 2025 focuses on creating more immersive, interactive, and accessible digital experiences. One major trend is the increasing use of AI-powered design assistants that automatically generate layouts and color schemes. Another trend is 3D elements and micro-animations, which make websites more dynamic and visually engaging. Accessibility is also becoming a priority, as designers aim to ensure that people with disabilities can navigate websites easily. Dark mode support is now a standard requirement, and minimalistic design continues to dominate. Overall, the future of web design is user-centric, with a strong emphasis on clarity, performance, and personalization.",
+        "az": "2025-ci ildə web dizayn daha immersiv, interaktiv və əlçatan rəqəmsal təcrübələrin yaradılmasına fokuslanır. Əsas trendlərdən biri AI əsaslı dizayn köməkçilərinin geniş yayılmasıdır. Bu alətlər avtomatik olaraq layout, rəng palitrası və vizual elementlər yaradır. Digər trend isə 3D elementlər və mikro-animasiya effektləridir — bunlar saytları daha dinamik və cəlbedici edir. Əlçatanlıq da prioritetə çevrilir, çünki dizaynerlər xüsusi ehtiyacı olan insanların saytları rahat istifadə etməsini təmin etməlidir. Dark mode artıq standart bir xüsusiyyətdir və minimal dizayn xətti hələ də populyardır. Gələcəyin web dizaynı istifadəçi mərkəzli olacaq.",
+        "ru": "В 2025 году веб-дизайн всё больше стремится к созданию интерактивных, удобных и доступных цифровых интерфейсов. Один из ключевых трендов — использование ИИ-инструментов для автоматической генерации макетов и цветовых схем. Всё большую популярность набирают 3D элементы и микроанимации, делающие сайты более живыми. Вопросы доступности становятся приоритетом, и дизайнеры уделяют внимание удобству пользователей с ограниченными возможностями. Поддержка тёмного режима уже является стандартом, а минимализм продолжает доминировать. В целом, будущее веб-дизайна — это ориентированность на пользователя, высокую производительность и персонализацию."
+      },
+      "author": {
+        "en": "Digital Design Hub",
+        "az": "Rəqəmsal Dizayn Mərkəzi",
+        "ru": "Центр Цифрового Дизайна"
+      }
+    },
+    {
+      "id": 5,
+      "title": {
+        "en": "How to Boost Your Productivity as a Student",
+        "az": "Tələbə kimi Produktivliyi Necə Artırmaq Olar",
+        "ru": "Как Повысить Продуктивность Студенту"
+      },
+      "content": {
+        "en": "Staying productive as a student can be challenging, especially with increasing academic pressure and digital distractions. One of the best strategies is effective time management — creating schedules, setting priorities, and avoiding multitasking. Another key approach is using technology wisely, such as digital planners, note-taking apps, and AI-based study assistants. Students should also take regular breaks using methods like the Pomodoro technique to avoid burnout. A healthy lifestyle, including proper sleep and exercise, has a direct impact on concentration and memory. In addition, learning active study techniques such as summarizing, teaching others, and solving practice questions improves long-term retention.",
+        "az": "Tələbə kimi məhsuldar olmaq çətin ola bilər, xüsusilə də dərslərin artdığı və rəqəmsal yayındırıcıların çoxaldığı dövrdə. Ən yaxşı strategiyalardan biri vaxtın düzgün idarə edilməsidir — cədvəl qurmaq, prioritetləri müəyyənləşdirmək və multitaskinqdən uzaq durmaq. Digər mühüm üsul texnologiyadan ağıllı istifadə etməkdir: rəqəmsal planlayıcılar, qeydetmə tətbiqləri və AI əsaslı öyrənmə köməkçiləri çox faydalı ola bilər. Pomodoro kimi metodlarla fasilə vermək yanma hissinin qarşısını alır. Sağlam yuxu və fizi̇ki aktivlik diqqət və yaddaşı gücləndirir. Aktiv öyrənmə üsulları da çox effektivdir — məsələn, konspektləşdirmə, başqasına izah etmək və praktiki sualları həll etmək.",
+        "ru": "Студентам бывает сложно поддерживать высокую продуктивность, особенно в условиях растущих учебных нагрузок и цифровых отвлекающих факторов. Один из самых эффективных методов — грамотное управление временем: составление расписания, расстановка приоритетов и отказ от многозадачности. Важную роль играет правильное использование технологий, включая цифровые планировщики, приложения для конспектирования и ИИ-ассистенты. Регулярные перерывы по методике Помодоро помогают избежать переутомления. Здоровый образ жизни — сон и физическая активность — напрямую влияет на концентрацию. Активные методы обучения, такие как создание конспектов, объяснение материала другим и решение практических задач, значительно повышают качество усвоения."
+      },
+      "author": {
+        "en": "Student Success Lab",
+        "az": "Tələbə Uğur Mərkəzi",
+        "ru": "Лаборатория Студенческого Успеха"
+      }
+    }
+  ]
+}
