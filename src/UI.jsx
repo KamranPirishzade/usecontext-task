@@ -10,7 +10,6 @@ import { useState } from "react";
 const UI = () => {
   //   console.log(Object.keys(localStorage.getItem("user")).length);
   const [userData] = useContext(UserContext);
-  const [theme] = useContext(ThemeContext);
   const [language] = useContext(LanguageContext);
   const [blogs, setBlogs] = useState([]);
 
@@ -34,7 +33,7 @@ const UI = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-sky-100 p-5 flex flex-col items-center">
+    <div className="min-h-screen dark:bg-neutral-800 dark:text-white bg-sky-100 p-5 flex flex-col items-center">
       {Object.keys(userData).length !== 0 ? (
         <div className="flex flex-col h-full px-10">
           <Navbar username={userData.username} language={language} />
@@ -50,7 +49,7 @@ const UI = () => {
           </div>
         </div>
       ) : (
-        <Signup />
+        <Signup language={language} />
       )}
     </div>
   );

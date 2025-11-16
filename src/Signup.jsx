@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import { UserContext } from "./context/UserContext";
+import ThemeButton from "./ThemeButton";
+import LanguagesDropdown from "./LanguagesDropdown";
+import signUpForm from "./constants/signupLabels";
 
-const Login = () => {
+const Login = ({ language }) => {
   const [userData, setUserData] = useContext(UserContext);
 
   function handleSubmit(e) {
@@ -17,8 +20,11 @@ const Login = () => {
   }
 
   return (
-    <div className="p-12 bg-white rounded mt-40">
-      <h2 className="text-center text-3xl font-semibold">Sign up form</h2>
+    <div className="p-12 bg-white dark:bg-black rounded mt-30">
+      <h2 className="text-center text-3xl font-semibold">
+        {signUpForm[language].title}
+      </h2>
+
       <form
         action=""
         className="flex flex-col justify-center items-center min-w-60 gap-4"
@@ -26,7 +32,7 @@ const Login = () => {
       >
         <div className="space-x-2 flex flex-col gap-2">
           <label htmlFor="username" className="text-xl">
-            Name
+            {signUpForm[language].name}
           </label>
           <input
             id="username"
@@ -39,7 +45,7 @@ const Login = () => {
         </div>
         <div className="space-x-2 flex flex-col gap-2">
           <label htmlFor="email" className="text-xl">
-            Email
+            {signUpForm[language].email}
           </label>
           <input
             id="email"
@@ -51,7 +57,7 @@ const Login = () => {
         </div>
         <div className="space-x-2 flex flex-col gap-2">
           <label htmlFor="pass" className="text-xl">
-            Password
+            {signUpForm[language].password}
           </label>
           <input
             id="pass"
@@ -66,9 +72,13 @@ const Login = () => {
           type="submit"
           className="rounded bg-sky-600 text-white px-6 py-3 text-xl hover:text-black hover:bg-sky-200 transition-all duration-300"
         >
-          Sign up
+          {signUpForm[language].signIn}
         </button>
       </form>
+      <div className="flex justify-between mt-5">
+        <ThemeButton />
+        <LanguagesDropdown />
+      </div>
     </div>
   );
 };

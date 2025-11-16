@@ -13,7 +13,10 @@ export const ThemeProvider = ({ children }) => {
     }
   });
   useEffect(() => {
+    const root = window.document.documentElement;
+    root.className = "";
     localStorage.setItem("theme", JSON.stringify(theme));
+    root.classList.add(theme);
   }, [theme]);
 
   return (

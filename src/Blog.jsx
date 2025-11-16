@@ -4,7 +4,7 @@ const Blog = ({ title, content, author, id }) => {
   return (
     <div
       key={id}
-      className="rounded-3xl bg-white px-6 py-8 shadow-xl space-y-2"
+      className="rounded-3xl bg-white px-6 py-8 shadow-xl space-y-2 dark:bg-black"
     >
       <h2 className="text-2xl font-bold">{title}</h2>
       <p>{content}</p>

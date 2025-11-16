@@ -22,7 +22,7 @@ const ThemeButton = () => {
         onChange={handleTheme}
         checked={theme == "dark" ? true : false}
       />
-      <div class="relative outline-1  mx-3 w-9 h-5 bg-neutral-quaternary peer-focus:outline rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:bg-black after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
+      <div class="relative outline-1  mx-3 w-9 h-5 bg-neutral-quaternary peer-focus:outline rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-buffer after:content-[''] after:absolute after:top-0.5 after:start-0.5 after:bg-black dark:after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-brand"></div>
       <span class="select-none text-sm font-medium text-heading">Dark</span>
     </label>
   );
