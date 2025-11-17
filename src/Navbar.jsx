@@ -4,13 +4,13 @@ import menuItems from "./constants/navbarLabels";
 
 const Navbar = ({ username, language }) => {
   return (
-    <div>
-      <ul className="flex min-h-18 dark:bg-black my-5 p-2 max-w-180 m-auto gap-4 rounded-2xl bg-white justify-evenly items-center mt-10 cursor-pointer ">
-        <li>{menuItems[language].blogs}</li>
-        <li>{menuItems[language].about}</li>
-        <li>{menuItems[language].profile}</li>
+    <nav>
+      <ul className="flex min-h-18 dark:bg-black my-5 p-2 max-w-180 m-auto gap-4 rounded-2xl bg-white justify-evenly items-center mt-10 cursor-pointer flex-wrap">
+        <li className="navLink">{menuItems[language].blogs}</li>
+        <li className="navLink">{menuItems[language].about}</li>
+        <li className="navLink">{menuItems[language].profile}</li>
         <li>
-          <ThemeButton />
+          <ThemeButton language={language} />
         </li>
         <li className="flex items-center gap-1">
           <img
@@ -24,7 +24,7 @@ const Navbar = ({ username, language }) => {
           <LanguagesDropdown />
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

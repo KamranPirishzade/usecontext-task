@@ -1,3 +1,22 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+nav li {
+  position: relative;
+}
+
+nav .navLink::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  background-color: gray;
+  bottom: -3px;
+  left: 0px;
+  height: 2px;
+  transition: width ease 0.3s;
+}
+
+nav .navLink:hover::after {
+  width: 100%;
+}

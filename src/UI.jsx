@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import Signup from "./Signup";
 import { UserContext } from "./context/UserContext";
 import Navbar from "./Navbar";
-import { ThemeContext } from "./context/ThemeContext";
 import Blog from "./Blog";
 import { LanguageContext } from "./context/LanguageContext";
 import { useState } from "react";
@@ -37,9 +36,10 @@ const UI = () => {
       {Object.keys(userData).length !== 0 ? (
         <div className="flex flex-col h-full px-10">
           <Navbar username={userData.username} language={language} />
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
             {blogs.map((blog) => (
               <Blog
+                key={blog.id}
                 id={blog.id}
                 title={blog.title[language]}
                 content={blog.content[language]}
