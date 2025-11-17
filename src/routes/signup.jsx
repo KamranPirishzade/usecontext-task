@@ -1,11 +1,20 @@
+import { createFileRoute } from "@tanstack/react-router";
 import React, { useContext } from "react";
-import { UserContext } from "./context/UserContext";
-import ThemeButton from "./ThemeButton";
-import LanguagesDropdown from "./LanguagesDropdown";
-import signUpForm from "./constants/signupLabels";
+import { UserContext } from "../context/UserContext";
+import ThemeButton from "../components/ThemeButton";
+import LanguagesDropdown from "../components/LanguagesDropdown";
+import signUpForm from "../constants/signupLabels";
+import { LanguageContext } from "../context/LanguageContext";
+import { useNavigate } from "@tanstack/react-router";
 
-const Login = ({ language }) => {
+export const Route = createFileRoute("/signup")({
+  component: Signup,
+});
+
+const Signup = () => {
   const [userData, setUserData] = useContext(UserContext);
+  const [language] = useContext(LanguageContext);
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,6 +26,7 @@ const Login = ({ language }) => {
     };
 
     setUserData(formData);
+    navigate({ to: "/" });
   }
 
   return (
@@ -52,6 +62,7 @@ const Login = ({ language }) => {
             name="email"
             type="email"
             className="outline-1 min-w-80 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
             required
           />
         </div>
@@ -82,5 +93,3 @@ const Login = ({ language }) => {
     </div>
   );
 };
-
-export default Login;

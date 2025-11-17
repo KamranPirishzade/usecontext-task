@@ -1,18 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import { UserProvider } from "./context/UserContext";
-import { ThemeProvider } from "./context/ThemeContext.jsx";
-import { LanguageProvider } from "./context/LanguageContext.jsx";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+
+const router = createRouter({ routeTree });
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <UserProvider>
-      <ThemeProvider>
-        <LanguageProvider>
-          <App />
-        </LanguageProvider>
-      </ThemeProvider>
-    </UserProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );

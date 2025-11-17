@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ThemeContext } from "./context/ThemeContext";
-import themeLabels from "./constants/themeLabels";
-import { LanguageContext } from "./context/LanguageContext";
+import { ThemeContext } from "../context/ThemeContext";
+import themeLabels from "../constants/themeLabels";
+import { LanguageContext } from "../context/LanguageContext";
 
 const ThemeButton = () => {
   const [theme, setTheme] = useContext(ThemeContext);

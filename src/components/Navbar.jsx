@@ -1,11 +1,11 @@
 import ThemeButton from "./ThemeButton";
 import LanguagesDropdown from "./LanguagesDropdown";
-import menuItems from "./constants/navbarLabels";
+import menuItems from "../constants/navbarLabels";
 
 const Navbar = ({ username, language, setUserData }) => {
   return (
     <nav>
-      <ul className="flex min-h-18 dark:bg-black my-5 p-2 min-w-120 m-auto gap-4 rounded-2xl bg-white justify-evenly items-center mt-10 cursor-pointer flex-wrap">
+      <ul className="flex min-h-18 dark:bg-black max-md:min-w-60 my-5 p-2 min-w-120 m-auto gap-4 rounded-2xl bg-white justify-evenly items-center mt-10 cursor-pointer flex-wrap">
         <li className="navLink">{menuItems[language].blogs}</li>
         <li className="navLink">{menuItems[language].about}</li>
         <li className="navLink">{menuItems[language].profile}</li>
