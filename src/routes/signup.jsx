@@ -30,18 +30,18 @@ const Signup = () => {
   }
 
   return (
-    <div className="p-12 bg-white dark:bg-black rounded mt-30">
-      <h2 className="text-center text-3xl font-semibold">
+    <div className="p-12 max-md:p-6 bg-white dark:bg-black rounded mt-30">
+      <h2 className="text-center text-3xl max-md:text-2xl font-semibold">
         {signUpForm[language].title}
       </h2>
 
       <form
         action=""
-        className="flex flex-col justify-center items-center min-w-60 gap-4"
+        className="flex flex-col justify-center items-center min-w-60 max-md:min-w-30 gap-4"
         onSubmit={handleSubmit}
       >
         <div className="space-x-2 flex flex-col gap-2">
-          <label htmlFor="username" className="text-xl">
+          <label htmlFor="username" className="text-xl max-md:text-lg">
             {signUpForm[language].name}
           </label>
           <input
@@ -49,7 +49,7 @@ const Signup = () => {
             name="username"
             type="text"
             minLength={3}
-            className="outline-1 min-w-80 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60   rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
             required
           />
         </div>
@@ -61,7 +61,7 @@ const Signup = () => {
             id="email"
             name="email"
             type="email"
-            className="outline-1 min-w-80 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60   rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
             pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
             required
           />
@@ -75,18 +75,18 @@ const Signup = () => {
             name="pass"
             type="password"
             minLength={8}
-            className="outline-1 min-w-80 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300  user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60  rounded px-3 py-1 focus:outline-3 focus:outline-sky-300  user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
             required
           />
         </div>
         <button
           type="submit"
-          className="rounded bg-sky-600 text-white px-6 py-3 text-xl hover:text-black hover:bg-sky-200 transition-all duration-300"
+          className="rounded bg-sky-600 text-white px-6 py-3 text-xl max-md:text-lg max-md:px-2 max-md:py-1 hover:text-black hover:bg-sky-200 transition-all duration-300"
         >
           {signUpForm[language].signIn}
         </button>
       </form>
-      <div className="flex justify-between mt-5">
+      <div className="flex justify-between mt-5 max-sm:flex-col max-sm:items-center max-sm:gap-4">
         <ThemeButton />
         <LanguagesDropdown />
       </div>
