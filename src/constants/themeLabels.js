@@ -8,8 +8,8 @@ const themeLabels = {
     light: "işıqlı",
   },
   ru: {
-    dark: "dark",
-    light: "light",
+    dark: "темный",
+    light: "светлый",
   },
 };
 
