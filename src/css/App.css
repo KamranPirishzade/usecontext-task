@@ -20,3 +20,41 @@ nav .navLink::after {
 nav .navLink:hover::after {
   width: 100%;
 }
+
+.burger {
+  width: 30px;
+  height: 40px;
+  position: relative;
+}
+
+.burger span {
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transition: transform ease 0.3s;
+}
+
+.burger span:first-child {
+  top: 25%;
+}
+
+.burger span:last-child {
+  top: 75%;
+}
+
+.burger.active span:first-child {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.burger.active span:last-child {
+  top: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.burger.active span:nth-child(2) {
+  visibility: hidden;
+}

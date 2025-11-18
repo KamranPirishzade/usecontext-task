@@ -41,7 +41,7 @@ const UI = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-full px-10 items-center">
+    <div className="flex flex-col h-full px-10 max-md:px-2 items-center">
       <Navbar
         username={userData.username}
         language={language}

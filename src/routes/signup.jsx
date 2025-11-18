@@ -86,10 +86,6 @@ const Signup = () => {
           {signUpForm[language].signIn}
         </button>
       </form>
-      <div className="flex justify-between mt-5 max-sm:flex-col max-sm:items-center max-sm:gap-4">
-        <ThemeButton />
-        <LanguagesDropdown />
-      </div>
     </div>
   );
 };

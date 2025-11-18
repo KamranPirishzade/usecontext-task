@@ -12,7 +12,7 @@ const LanguagesDropdown = () => {
       <select
         name="lang"
         id="lang"
-        className="p-2 outline-1 rounded-2xl dark:bg-black dark:outline-white"
+        className="p-2 outline-1 rounded-2xl dark:bg-black dark:outline-white max-md:text-xs"
         onChange={handleLang}
         value={language}
       >
