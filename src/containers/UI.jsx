@@ -1,25 +1,14 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../context/UserContext";
 import Navbar from "../components/Navbar";
 import Blog from "../components/Blog";
 import { LanguageContext } from "../context/LanguageContext";
 import { useState } from "react";
-import { useNavigate } from "@tanstack/react-router";
-
-export const Route = createFileRoute("/")({
-  component: UI,
-});
 
 const UI = () => {
   const [userData, setUserData] = useContext(UserContext);
   const [language] = useContext(LanguageContext);
   const [blogs, setBlogs] = useState([]);
-  const navigate = useNavigate();
-
-  if (Object.keys(userData).length == 0) {
-    navigate({ to: "/signup" });
-  }
 
   useEffect(() => {
     async function getBlogs() {
@@ -41,7 +30,7 @@ const UI = () => {
   }, []);
 
   return (
-    <div className="flex flex-col h-full px-10 max-md:px-2 items-center">
+    <div className="flex grow flex-col h-full px-10 max-md:px-2 items-center">
       <Navbar
         username={userData.username}
         language={language}
@@ -61,3 +50,5 @@ const UI = () => {
     </div>
   );
 };
+
+export default UI;

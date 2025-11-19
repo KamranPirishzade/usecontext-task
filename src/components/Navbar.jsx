@@ -1,10 +1,12 @@
 import ThemeButton from "./ThemeButton";
 import LanguagesDropdown from "./LanguagesDropdown";
 import menuItems from "../constants/navbarLabels";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 
-const Navbar = ({ username, language, setUserData }) => {
+const Navbar = ({ username, setUserData }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [language] = useContext(LanguageContext);
 
   return (
     <nav className="relative max-md:min-w-90 max-sm:min-w-70 min-w-150">
