@@ -1,12 +1,9 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "../context/UserContext";
-import Navbar from "../components/Navbar";
 import Blog from "../components/Blog";
 import { LanguageContext } from "../context/LanguageContext";
 import { useState } from "react";
 
 const UI = () => {
-  const [userData, setUserData] = useContext(UserContext);
   const [language] = useContext(LanguageContext);
   const [blogs, setBlogs] = useState([]);
 
@@ -31,11 +28,6 @@ const UI = () => {
 
   return (
     <div className="flex grow flex-col h-full px-10 max-md:px-2 items-center">
-      <Navbar
-        username={userData.username}
-        language={language}
-        setUserData={setUserData}
-      />
       <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4">
         {blogs.map((blog) => (
           <Blog

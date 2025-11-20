@@ -1,12 +1,12 @@
-import ThemeButton from "./ThemeButton";
-import LanguagesDropdown from "./LanguagesDropdown";
 import menuItems from "../constants/navbarLabels";
 import { useContext, useState } from "react";
 import { LanguageContext } from "../context/LanguageContext";
+import { UserContext } from "../context/UserContext";
 
-const Navbar = ({ username, setUserData }) => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [language] = useContext(LanguageContext);
+  const [userData, setUserData] = useContext(UserContext);
 
   return (
     <nav className="relative max-md:min-w-90 max-sm:min-w-70 min-w-150">
@@ -22,7 +22,7 @@ const Navbar = ({ username, setUserData }) => {
               className="bg-white rounded-full max-md:w-6"
               width={36}
             />
-            {username}
+            {userData.username}
           </div>
 
           <div>
@@ -48,18 +48,18 @@ const Navbar = ({ username, setUserData }) => {
       {menuOpen && (
         <div className="dark:bg-gray-600 bg-gray-300 rounded-2xl w-full p-3 absolute hidden max-md:block">
           <div className="flex items-center justify-between">
-            <div className="flex items-center">
+            <div className="flex items-center  max-md:hidden max-sm:block">
               <img
                 src="/profile.png"
                 className="bg-white rounded-full max-md:w-6"
                 width={36}
               />
-              {username}
+              {userData.username}
             </div>
 
             <div>
               <button
-                className="cursor-pointer outline-1 px-2 py-1 rounded hover:outline-2 max-md:text-sm max-md:px-1 max-md:py-0.5"
+                className="cursor-pointer outline-1 px-2 py-1 rounded hover:outline-2 max-md:text-sm max-md:px-1 max-md:py-0.5 max-md:hidden max-sm:block"
                 onClick={() => {
                   setUserData({});
                 }}
