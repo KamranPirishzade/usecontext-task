@@ -4,6 +4,7 @@ import signUpForm from "../constants/signupLabels";
 import { LanguageContext } from "../context/LanguageContext";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import errorLabels from "../constants/errorLabels";
 
 const Signup = () => {
   const [errors, setErrors] = useState([]);
@@ -14,50 +15,55 @@ const Signup = () => {
   function isEmailValid(email) {
     const validEmailRegex =
       /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
-    if (!email) return false;
+    if (!email) return errorLabels.email.required;
 
     const emailParts = email.split("@");
 
-    if (emailParts.length !== 2) return "Email should contain one @ symbol";
+    if (emailParts.length !== 2) return errorLabels.email.oneAt;
 
     const account = emailParts[0];
     const domain = emailParts[1];
 
-    if (account.length > 64)
-      return "Account length should not be over 64 characters";
-    else if (domain.length > 255)
-      return "Domain length should not be over 64 characters";
+    if (account.length > 64) return errorLabels.email.accountLong;
+    else if (domain.length > 255) return errorLabels.email.domainLong;
 
     const domainParts = domain.split(".");
 
     if (domainParts.some((part) => part.length > 63))
-      return "Email domain is not valid";
+      return errorLabels.email.domainPartLong;
 
-    if (!validEmailRegex.test(email))
-      return "Please enter a valid email address";
+    if (!validEmailRegex.test(email)) return errorLabels.email.invalid;
 
     return "valid";
   }
 
   function isUserNameValid(username) {
     if (username.length < 3) {
-      return "Username is too short.";
+      return errorLabels.username.short;
     }
     if (username.length > 20) {
-      return "Username is too long.";
+      return errorLabels.username.long;
     }
 
     const pattern = /^[a-zA-Z0-9._]+$/;
     if (!pattern.test(username)) {
-      return "Username contains invalid characters. Only letters, numbers, dots, and underscores are allowed.";
+      return errorLabels.username.invalidCharacters;
     }
 
     if (username.startsWith(".") || username.startsWith("_")) {
-      return "Username cannot start with a dot or underscore.";
+      return errorLabels.username.noStart;
     }
     if (username.endsWith(".") || username.endsWith("_")) {
-      return "Username cannot end with a dot or underscore.";
+      return errorLabels.username.noEnd;
     }
+
+    return "valid";
+  }
+
+  function isPasswordValid(password) {
+    if (password.length < 8) return errorLabels.pass.short;
+    if (password == password.toLowerCase()) return errorLabels.pass.noUpper;
+    if (password == password.toUpperCase()) return errorLabels.pass.noLower;
 
     return "valid";
   }
@@ -66,6 +72,7 @@ const Signup = () => {
     e.preventDefault();
     setErrors([]);
     const user = new FormData(e.target);
+
     const formData = {
       email: user.get("email"),
       pass: user.get("pass"),
@@ -76,9 +83,13 @@ const Signup = () => {
       setErrors((pre) => [isUserNameValid(formData.username), ...pre]);
       return;
     }
-
     if (isEmailValid(formData.email) != "valid") {
-      setErrors((pre) => ["Please enter valid email", ...pre]);
+      setErrors((pre) => [isEmailValid(formData.email), ...pre]);
+      return;
+    }
+
+    if (isPasswordValid(formData.pass) != "valid") {
+      setErrors((pre) => [isPasswordValid(formData.pass), ...pre]);
       return;
     }
 
@@ -107,7 +118,7 @@ const Signup = () => {
             name="username"
             type="text"
             minLength={3}
-            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60 rounded px-3 py-1 focus:outline-3 focus:outline-sky-300"
           />
         </div>
         <div className="space-x-2 flex flex-col gap-2">
@@ -118,7 +129,7 @@ const Signup = () => {
             id="email"
             name="email"
             type="email"
-            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60   rounded px-3 py-1 focus:outline-3 focus:outline-sky-300 user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60   rounded px-3 py-1 focus:outline-3 focus:outline-sky-300"
           />
         </div>
         <div className="space-x-2 flex flex-col gap-2">
@@ -130,10 +141,17 @@ const Signup = () => {
             name="pass"
             type="password"
             minLength={8}
-            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60  rounded px-3 py-1 focus:outline-3 focus:outline-sky-300  user-invalid:outline-red-400 user-invalid:outline-3 valid:outline-green-400 valid:outline-3"
+            className="outline-1 min-w-80 max-md:min-w-70 max-sm:min-w-60  rounded px-3 py-1 focus:outline-3 focus:outline-sky-300"
           />
+          {errors.length > 0
+            ? errors.map((err) => (
+                <p className="border-red-500 w-80 max-md:w-70 max-sm:w-60 border-2 p-1 rounded text-red-500 max-w-full">
+                  {err[language]}
+                </p>
+              ))
+            : ""}
         </div>
-        {errors.length > 0 ? errors.map((err) => <p>{err}</p>) : ""}
+
         <button
           type="submit"
           className="rounded bg-sky-600 text-white px-6 py-3 text-xl max-md:text-lg max-md:px-2 max-md:py-1 hover:text-black hover:bg-sky-200 transition-all duration-300"
